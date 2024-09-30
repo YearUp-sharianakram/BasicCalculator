@@ -4,9 +4,10 @@ public class Calculator {
     public static void main(String[] args){
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Enter the first number: ");
-        int firstNumber = Integer.parseInt(myScanner.nextLine());
+        float firstNumber = myScanner.nextFloat();
         System.out.println("Enter the second number: ");
-        int secondNumber = Integer.parseInt(myScanner.nextLine());
+        float secondNumber = myScanner.nextFloat();
+        myScanner.nextLine();
         System.out.println("Possible calculations: ");
         System.out.println("(A)dd");
         System.out.println("(S)ubtract");
@@ -16,16 +17,16 @@ public class Calculator {
         String operation = myScanner.nextLine();
 
         if (Objects.equals(operation, "A")){
-            int addValue = firstNumber + secondNumber;
+            float addValue = firstNumber + secondNumber;
             System.out.println(firstNumber + " + " +  secondNumber + " = " + addValue);
         } else if (Objects.equals(operation, "S")){
-            int subtractValue = firstNumber - secondNumber;
+            float subtractValue = firstNumber - secondNumber;
             System.out.println(firstNumber + " - " +  secondNumber + " = " + subtractValue);
         } else if (Objects.equals(operation, "M")){
-            int multiplyValue = firstNumber * secondNumber;
+            float multiplyValue = firstNumber * secondNumber;
             System.out.println(firstNumber + " * " +  secondNumber + " = " + multiplyValue);
         } else if (Objects.equals(operation, "D")){
-            double divideValue = firstNumber / secondNumber;
+            float divideValue = firstNumber / secondNumber;
             System.out.println(firstNumber + " / " +  secondNumber + " = " + divideValue);
         }else{
             System.out.println("invalid option");
